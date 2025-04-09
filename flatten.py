@@ -1,3 +1,8 @@
+"""flatten(lst)        Flattens the list 
+                    ie input = [1,2,3, [1,2,3,[3,4],2]]
+                    output = [1,2,3,1,2,3,3,4,2]"""
+
+
 def flatten(lst):
     result = []
     for e in lst:
