@@ -1,3 +1,8 @@
+""" Question-4:
+Recursively go below a dir and based on filter, dump those files in to  single file 
+(work with only text file)"""
+
+
 import os
 
 def files(directory):
