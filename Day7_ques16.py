@@ -29,7 +29,7 @@ def favicon():
 def updatefortoday():
     if request.method == 'POST': 
         content = request.form.get("content", "")
-        with open("today_update.txt", "w") as f:
+        with open("today_update.txt", "a") as f:
             f.write(content)
         return f"<p>Update Saved</p><a href='/'> Go Home</a>"
         
@@ -58,7 +58,7 @@ def share():
 
 @app.route("/clearnotepadtxt", methods=['GET'])
 def clear_notepad_txt():
-    open("today_update.txt", "w").close()
+    open("today_update.txt", "a").close()
     return "<p>Note cleared</p><a href='/'> Go Home</a>"
 
 
