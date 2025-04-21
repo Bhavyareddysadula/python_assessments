@@ -58,7 +58,7 @@ def share():
 
 @app.route("/clearnotepadtxt", methods=['GET'])
 def clear_notepad_txt():
-    open("today_update.txt", "a").close()
+    open("today_update.txt", "w").close()
     return "<p>Note cleared</p><a href='/'> Go Home</a>"
 
 
