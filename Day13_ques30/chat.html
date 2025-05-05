@@ -1,1 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Chatbot</title>
+</head>
+<body>
+    <h1>My Chatbot</h1>
 
+    <form method="POST">
+        <h3>Query:</h3>
+        <input type="text" name="query" required>
+        <input type="submit" value="Ask">
+    </form>
+    <h3>Result:</h3>
+    <p>{{result}}</p>
+    <h3>History:</h3>
+    <ul>
+        {%for msg in history%}
+            <li><strong>{{'You' if msg.role == 'user' else 'Bot'}}:</strong>{{msg.content}}</li>
+        {%endfor%}
+    </ul>
+</body>
+</html>
