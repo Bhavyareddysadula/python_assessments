@@ -8,7 +8,7 @@ app.secret_key = 'mykey123'
 
 os.environ["MISTRAL_API_KEY"] = "PHhuPwA28efvLjGbbXBdfDXx0XwjKjNP" # setting up the mistral ai key to os environment
 
-llm = ChatMistralAI(model="mistral-small-latest") # chat model is mistal ai
+llm = ChatMistralAI(model="open-mistral-nemo") # chat model is mistal ai
 
 def chatbot(history):
     messages = []
